@@ -16,11 +16,23 @@ const Text = styled.p`
 	letter-spacing: 2px;
 `;
 
+const Link = styled.a`
+	margin-left: .5rem;
+	margin-right: .5rem;
+	color: #64ffda;
+	text-decoration: none;
+	&:hover {
+    border-bottom: 1px solid #64ffda;
+  }
+`;
+
 export default class components extends Component {
   render() {
     return (
 			<Container>
-				<Text>Build by Yasmin Miranda.</Text>
+				<Text>Inspired by  
+				<Link href="https://brittanychiang.com/" target="_blank">Brittany Chiang</Link> 
+				 & Build by Yasmin Miranda.</Text>
 			</Container>
     );
   }
