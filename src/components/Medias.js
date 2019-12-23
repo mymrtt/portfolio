@@ -23,7 +23,24 @@ const Image = styled.img`
 	margin-bottom: 1rem;
 `;
 
-export default class components extends Component {
+const Text = styled.p`
+	margin-top: 10rem;
+	width: 100%;
+	color: #64ffda;
+	letter-spacing: 3px;
+	transform: rotate(270deg);
+`;
+
+const Line = styled.div`
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+	width: ${(props) => props.width};
+	height: .1rem;
+	background-color: #000;
+	transform: rotate(270deg);
+`;
+
+export default class Medias extends Component {
   render() {
     return (
       <Container>
@@ -36,6 +53,8 @@ export default class components extends Component {
 				<a href="https://www.linkedin.com/in/yasmin-miranda/" target="_blank">
 					<Image src={linkedin} alt="LinkedIn" />
 				</a>
+				<Line width={'30%'} />
+				<Text>mymrtt@gmail.com</Text>
 			</Container>
     );
   }

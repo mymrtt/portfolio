@@ -17,7 +17,7 @@ const Text = styled.p`
 `;
 
 const List = styled.span`
-	width: 30%;
+	width: 25%;
 	display: flex;
 	justify-content: space-evenly;
 `;
@@ -31,16 +31,15 @@ const ListItem = styled.a`
   }
 `;
 
-export default class components extends Component {
+export default class Header extends Component {
   render() {
     return (
 			<Container>
 				<Text>Y</Text>
 				<List>
-					<ListItem href='#'>About</ListItem>
-					<ListItem href='#'>Experience</ListItem>
-					<ListItem href='#'>Work</ListItem>
-					<ListItem href='#'>Contact</ListItem>
+					<ListItem href='#About'>About</ListItem>
+					<ListItem href='#Experiece'>Experience</ListItem>
+					<ListItem href='#Work'>Work</ListItem>
 				</List>
 			</Container>
     );

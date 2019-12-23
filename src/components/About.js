@@ -54,10 +54,10 @@ const Image = styled.img`
   }
 `;
 
-export default class components extends Component {
+export default class About extends Component {
   render() {
     return (
-			<Container>
+			<Container id="About">
 				<Line width={'10%'} />
 					<Text fontSize={'2rem'} color>About me</Text>
 				<ContainerDescription>
@@ -73,7 +73,6 @@ export default class components extends Component {
 				<ContainerTec>
 					<TextTec>ReactJS</TextTec>
 					<TextTec>React Native</TextTec>
-					<TextTec>Styled-Component</TextTec>
 				</ContainerTec>
 				<Text fontSize={'1.2rem'}>Soft Skills:</Text>
 				<ContainerTec>

@@ -2,7 +2,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 
-const Container = styled.div`
+const Container = styled.footer`
 	padding: 0 15rem;
 	height: 3.5rem;
 	display: flex;
@@ -26,7 +26,7 @@ const Link = styled.a`
   }
 `;
 
-export default class components extends Component {
+export default class Footer extends Component {
   render() {
     return (
 			<Container>

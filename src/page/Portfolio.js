@@ -8,7 +8,7 @@ import Home from '../components/Home';
 import Medias from '../components/Medias';
 import About from '../components/About';
 import Experience from '../components/Experience';
-
+import Work from '../components/Work';
 import Footer from '../components/Footer';
 
 const Container = styled.div`
@@ -16,6 +16,7 @@ const Container = styled.div`
 `;
 
 class Portfolio extends Component {
+
   render() {
     return (
 			<Container>
@@ -24,7 +25,7 @@ class Portfolio extends Component {
 				<Medias />
 				<About />
 				<Experience />
-
+				<Work />
 				<Footer />
 			</Container>
     );
