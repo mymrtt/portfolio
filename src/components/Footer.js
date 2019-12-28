@@ -3,11 +3,15 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 
 const Container = styled.footer`
-	padding: 0 15rem;
+	padding: 0 15%;
 	height: 3.5rem;
 	display: flex;
 	justify-content: center;
-	background-color: #0d2c40;
+	${'' /* background-color: #0d2c40; */}
+
+	@media(max-width: 648px) {
+		padding: 0 5%;
+	}
 `;
 
 const Text = styled.p`

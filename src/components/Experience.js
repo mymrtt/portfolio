@@ -3,8 +3,12 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 
 const Container = styled.div`
-	padding: 0 15rem;
+	padding: 0 15%;
 	height: 60vh;
+
+	@media(max-width: 648px) {
+		padding: 0 13%;
+	}
 `;
 
 const Line = styled.div`
@@ -46,6 +50,10 @@ const ContainerExperience = styled.div`
 	display: flex;
 	flex-direction: column;
 	cursor: pointer;
+
+	@media(max-width: 1024px) {
+		width: 80%;
+	}
 `;
 
 const WrapperExperience = styled.div`

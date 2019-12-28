@@ -16,6 +16,13 @@ const Container = styled.div`
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+
+	@media(max-width: 1024px) {
+		width: 10%;
+	}
+	@media(max-width: 648px) {
+		display: none;
+	}
 `;
 
 const Image = styled.img`

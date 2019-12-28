@@ -13,6 +13,8 @@ import Footer from '../components/Footer';
 
 const Container = styled.div`
 	background-color: #183c52;
+	${'' /* background-color: #262e31; */}
+	${'' /* background-color: #000; */}
 `;
 
 class Portfolio extends Component {
