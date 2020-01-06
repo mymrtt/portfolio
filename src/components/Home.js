@@ -7,7 +7,7 @@ const Container = styled.div`
 	height: 80vh;
 
 	@media(max-width: 648px) {
-		padding: 11% 13% 0;
+		padding: 11% 10% 0;
 		height: 100%;
 	}
 `;
@@ -26,6 +26,7 @@ const Text = styled.p`
 	color: ${props => props.color};
 	font-size: ${props => props.fontSize};
 	letter-spacing: 2px;
+	line-height: 2rem;
 
 	@media(max-width: 960px) {
 		width: ${(props) => props.width && '55%'};
@@ -55,7 +56,7 @@ class Home extends Component {
 					color={'#64ffda'}
 					fontSize={'1rem'}
 				>
-					Hi, i am
+					Hi! my name is
 				</Text>
 				<Text 
 					marginT

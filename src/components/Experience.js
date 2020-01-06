@@ -4,10 +4,13 @@ import styled from 'styled-components';
 
 const Container = styled.div`
 	padding: 0 15%;
-	height: 60vh;
+	padding-top: 2rem;
+	height: ${(props) => props.heightDesk};
 
 	@media(max-width: 648px) {
-		padding: 0 13%;
+		padding: 0 10%;
+		padding-top: 2rem;
+		height: ${(props) => props.heightMob};
 	}
 `;
 
@@ -19,6 +22,7 @@ const Line = styled.div`
 `;
 
 const Text = styled.p`
+	margin-top: ${(props) => props.marginT && '2rem'};
 	margin-left: ${(props) => props.marginL && '1rem'};
 	width: ${(props) => props.width && '75%'};
 	font-size: ${props => props.fontSize};
@@ -43,6 +47,10 @@ const ContainerContent = styled.div`
 	padding-top: 5rem;
 	display: flex;
 	justify-content: center;
+	
+	@media(max-width: 648px) {
+		padding-top: 2rem;
+	}
 `;
 
 const ContainerExperience = styled.div`
@@ -60,6 +68,9 @@ const WrapperExperience = styled.div`
 	margin-left: 1.5rem;
 	width: 100%;
 	border-left: 1px dotted #c7c7c7;
+	@media(max-width: 648px) {
+		margin-left: 0;
+	}
 `;
 
 const ContainerMoreInfos = styled(WrapperExperience)`
@@ -92,16 +103,19 @@ export default class Experience extends Component {
  
 	renderMoreInfos = () => (
 		<ContainerMoreInfos>
-			<Text marginL width>What I use, besides the technologies mentioned above:</Text>
+			<Text marginT marginL width>What I use, besides the technologies mentioned above:</Text>
 			<TextTec>Stylization with Styled-Components</TextTec>
-			<TextTec>Internationalization with 118n</TextTec>
+			<TextTec>Internationalization with i18n</TextTec>
 			<TextTec>Automated tests with Cypress</TextTec>
 		</ContainerMoreInfos>
 	);
 
   render() {
     return (
-			<Container id="Experiece">
+			<Container id="Experiece"
+				heightDesk={ this.state.isOpen ? '65vh' : '60vh' }
+				heightMob={ this.state.isOpen ? '90vh' : '60vh' }
+			>
 				<Line width={'10%'} />
 				<Text fontSize={'2rem'} color>Experience</Text>
 				<ContainerContent>

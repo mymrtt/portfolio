@@ -10,7 +10,7 @@ const Container = styled.div`
 	height: 80vh;
 
 	@media(max-width: 648px) {
-		padding: 0 13%;
+		padding: 0 10%;
 		height: 100%;
 	}
 `;
@@ -35,15 +35,16 @@ const Text = styled.p`
 
 const Figure = styled.figure`
 	position: relative;
-	width: fit-content;
+	width: 50%;
 
   @media(max-width: 648px) {
-	  margin: 0;
+	margin: 0;
+	width: 100%;
   }
 `;
 
 const Image = styled.img`
-	width: 20rem;
+	width: 50%;
 	opacity: .8;
 	border-radius: 5px;
 	transition: 0.3s;
@@ -53,6 +54,9 @@ const Image = styled.img`
 ${'' /* 	&:hover {
 		opacity: 1;
 	} */}
+	@media(max-width: 648px) {
+		width: 100%;
+  }
 `;
 
 const ContainerIg = styled.div`
@@ -91,7 +95,7 @@ export default class Work extends Component {
 		<ContainerIg>
 			<Text color>I recreated a user profile on instagram using css grid.</Text>
 			<Text color>I developed this project through Codepen.</Text>
-			<Text color>Click to view! :)</Text>
+			<a href="https://codepen.io/mymrtt/pen/MNYxNy" target="_blank"><Text color>Click to view! :)</Text></a>
 		</ContainerIg>
 	);
 
@@ -100,12 +104,10 @@ export default class Work extends Component {
 			onMouseEnter={this.handleIgOpen}
 			onMouseLeave={this.handleIgOpen}
 		>
-			<a href="https://codepen.io/mymrtt/pen/MNYxNy" target="_blank">
-				<Image 
-					src={instagram}
-					alt="Instagram"
-				/>
-			</a>
+			<Image 
+				src={instagram}
+				alt="Instagram"
+			/>
 			{ this.state.isIgOpen && this.renderIgDescription() }
 		</Figure>
 	);

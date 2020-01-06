@@ -10,7 +10,7 @@ const Container = styled.div`
 	height: 90vh;
 
 	@media(max-width: 648px) {
-		padding: 0 13%;
+		padding: 0 10%;
 		padding-top: 7rem;
 		height: 100%;
 	}
