@@ -12,9 +12,8 @@ import Work from '../components/Work';
 import Footer from '../components/Footer';
 
 const Container = styled.div`
-	background-color: #183c52;
-	${'' /* background-color: #262e31; */}
-	${'' /* background-color: #000; */}
+	${'' /* background-color: #183c52; */}
+	background-color: #262e31;
 `;
 
 class Portfolio extends Component {

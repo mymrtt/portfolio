@@ -16,7 +16,7 @@ const Line = styled.div`
 	margin-bottom: 3rem;
 	width: 6%;
 	height: .1rem;
-	background-color: #c7c7c7;
+	background-color: #fff;
 `;
 
 const Text = styled.p`
@@ -61,7 +61,7 @@ class Home extends Component {
 				<Text 
 					marginT
 					marginB={'2.5rem'}
-					color={'#c7c7c7'}
+					color={'#fff'}
 					fontSize={'4rem'}
 					fontSizeMob={'2.5rem'}
 				>

@@ -15,7 +15,7 @@ const Container = styled.footer`
 `;
 
 const Text = styled.p`
-	color: #c7c7c7;
+	color: #fff;
 	font-size: 1rem;
 	letter-spacing: 2px;
 `;

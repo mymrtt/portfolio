@@ -20,7 +20,7 @@ const Line = styled.div`
 	margin-bottom: 3rem;
 	width: ${(props) => props.width};
 	height: .1rem;
-	background-color: #c7c7c7;
+	background-color: #fff;
 `;
 
 const ContainerDescription = styled.div`
@@ -37,7 +37,7 @@ const ContainerDescription = styled.div`
 const Text = styled.p`
 	width: ${(props) => props.width && '60%'};
 	font-size: ${props => props.fontSize};
-	color: ${(props) => props.color ? '#64ffda' : '#c7c7c7'};
+	color: ${(props) => props.color ? '#64ffda' : '#fff'};
 	letter-spacing: 2px;
 
 	@media(max-width: 960px) {
@@ -75,38 +75,33 @@ const TextTec = styled.p`
 const Image = styled.img`
 	width: 18rem;
 	border-radius: 50%;
-	opacity: 0.5;
 	cursor: pointer;
 	transition: 0.3s;
+	opacity: 0.8;
+	
 	&:hover {
-    opacity: 1;
+		opacity: 0.5;
   }
-
-	@media(max-width: 960px) {
-		opacity: 0.8;
-	}	
 `;
 
 export default class About extends Component {
-	constructor(props) {
-		super(props);
-
-		this.state = { 
-			technologies: [
-				'HTML5 & CSS3',
-				'JavaScript',
-				'ReactJS',
-				'React Native',
-			],
-			softSkills: [
-				'Team work',
-				'Flexibility',
-				'Empathy',
-				'Proactivity',
-				'Resilience',
-				'Collaboration',
-			]
-		}
+	state = { 
+		technologies: [
+			'HTML5 & CSS3',
+			'JavaScript',
+			'ReactJS',
+			'React Native',
+			'NodeJS',
+			'MySQL'
+		],
+		softSkills: [
+			'Team work',
+			'Flexibility',
+			'Empathy',
+			'Proactivity',
+			'Resilience',
+			'Collaboration',
+		]
 	}
 
   render() {
@@ -115,24 +110,20 @@ export default class About extends Component {
 				<Line width={'10%'} />
 					<Text fontSize={'2rem'} color>About me</Text>
 				<ContainerDescription>
-					<Text fontSize={'1.5rem'} width marginT={'3rem'}>I am Yasmin, I am a Junior Front-End <strong>Developer</strong> and <strong>Marketing</strong> student at the Getúlio Vargas Foundation. I was born and live in Rio de Janeiro, Brazil.</Text>
+					<Text fontSize={'1.5rem'} width marginT={'3rem'}>I am Yasmin, I am a Junior Front-End <strong>Developer</strong> and <strong>Marketing student</strong> at the Getúlio Vargas Foundation. I was born and live in Rio de Janeiro, Brazil.</Text>
 					<Image src={yasmin} alt="Yasmin Miranda" />
 				</ContainerDescription>
 				<Line width={'3%'} />
 				<Text fontSize={'1.2rem'}>Some technologies I work with:</Text>
 				<ContainerTec>
-					{ this.state.technologies.map((tec) => (
-						<>
-							<TextTec>{tec}</TextTec>
-						</>
+					{this.state.technologies.map(tec => (
+						<TextTec>{tec}</TextTec>
 					))}
 				</ContainerTec>
 				<Text fontSize={'1.2rem'}>Soft Skills:</Text>
 				<ContainerTec>
-					{ this.state.softSkills.map((skills) => (
-						<>
-							<TextTec>{skills}</TextTec>
-						</>
+					{this.state.softSkills.map(skills => (
+						<TextTec>{skills}</TextTec>
 					))}
 				</ContainerTec>
 			</Container>

@@ -18,7 +18,7 @@ const Container = styled.div`
 const Text = styled.p`
 	margin-left: 2rem;
 	font-size: 2rem;
-	color: #c7c7c7;
+	color: #fff;
 `;
 
 const List = styled.ul`
@@ -36,7 +36,7 @@ const List = styled.ul`
 
 const ListItem = styled.a`
 	letter-spacing: 2px;
-	color: #c7c7c7;
+	color: #fff;
 	text-decoration: none;
 	&:hover {
     color: #64ffda;

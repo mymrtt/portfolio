@@ -18,7 +18,7 @@ const Line = styled.div`
 	margin-bottom: 3rem;
 	width: ${(props) => props.width};
 	height: .1rem;
-	background-color: #c7c7c7;
+	background-color: #fff;
 `;
 
 const Text = styled.p`
@@ -26,7 +26,7 @@ const Text = styled.p`
 	margin-left: ${(props) => props.marginL && '1rem'};
 	width: ${(props) => props.width && '75%'};
 	font-size: ${props => props.fontSize};
-	color: ${(props) => props.color ? '#64ffda' : '#c7c7c7'};
+	color: ${(props) => props.color ? '#64ffda' : '#fff'};
 	letter-spacing: 2px;
 
 	&:before {
@@ -67,7 +67,7 @@ const ContainerExperience = styled.div`
 const WrapperExperience = styled.div`
 	margin-left: 1.5rem;
 	width: 100%;
-	border-left: 1px dotted #c7c7c7;
+	border-left: 1px dotted #fff;
 	@media(max-width: 648px) {
 		margin-left: 0;
 	}
@@ -91,11 +91,14 @@ const ContainerMoreInfos = styled(WrapperExperience)`
 `;
 
 export default class Experience extends Component {
-	constructor(props){
-		super(props);
-		
-		this.state = { isOpen: false };
-	}
+	state = { 
+		isOpen: false,
+		moreList: [
+			'Stylization with Styled-Components',
+			'Internationalization with i18n',
+			'Automated tests with Cypress'
+		]
+	};
 
 	handleExperience = () => {
 		this.setState({ isOpen: !this.state.isOpen });
@@ -104,9 +107,9 @@ export default class Experience extends Component {
 	renderMoreInfos = () => (
 		<ContainerMoreInfos>
 			<Text marginT marginL width>What I use, besides the technologies mentioned above:</Text>
-			<TextTec>Stylization with Styled-Components</TextTec>
-			<TextTec>Internationalization with i18n</TextTec>
-			<TextTec>Automated tests with Cypress</TextTec>
+			{this.state.moreList.map(item => (
+				<TextTec>{item}</TextTec>
+			))}
 		</ContainerMoreInfos>
 	);
 
