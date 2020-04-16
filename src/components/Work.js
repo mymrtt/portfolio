@@ -37,6 +37,7 @@ const ContainerList = styled.div`
 	display: flex;
 
 	@media(max-width: 648px){
+		align-items: center;
 		flex-direction: column;
 	}
 `;
@@ -49,8 +50,9 @@ const List = styled.ul`
 	border-radius: 6px;
 
 	@media(max-width: 648px) {
-		display: flex;
+		width: 100%;
 		height: auto;
+		display: flex;
 	}
 `;
 

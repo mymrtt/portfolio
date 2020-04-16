@@ -10,7 +10,7 @@ const Container = styled.footer`
 	${'' /* background-color: #0d2c40; */}
 
 	@media(max-width: 648px) {
-		padding: 0 5%;
+		padding: 1rem 2.3rem 3rem;
 	}
 `;
 

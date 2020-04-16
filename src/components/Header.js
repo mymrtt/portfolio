@@ -53,16 +53,17 @@ const MenuImage = styled.img`
 		display: flex;
 		margin-right: 1.5rem;
 		width: ${(props) => props.close ? '25px' : '30px'};
+		height: ${(props) => props.close ? '25px' : '30px'};
 	}
 `;
 
 const ContainerListMob = styled.div`
 	position: fixed;
 	top: 0;
-	z-index: 2;
+	z-index: 4;
 	width: 100%;
 	height: 100vh;
-	background-image: linear-gradient(15deg, #13547a 0%, #183c52 100%);
+	background-image: linear-gradient(15deg, #262e31 0%, #183c52 100%);
 `;
 
 const ContainerClose = styled.div`
@@ -94,7 +95,6 @@ export default class Header extends Component {
 
 	handleMenu = () => {
 		this.setState({ isOpenMenu: !this.state.isOpenMenu });
-		console.log(this.state.isOpenMenu);
 	}
 
 	renderList = () => (
