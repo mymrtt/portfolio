@@ -30,14 +30,13 @@ const Link = styled.a`
   }
 `;
 
-export default class Footer extends Component {
-  render() {
-    return (
-			<Container>
-				<Text>Inspired by  
-				<Link href="https://brittanychiang.com/" target="_blank">Brittany Chiang</Link> 
-				 & Build by Yasmin Miranda.</Text>
-			</Container>
-    );
-  }
-}
+const Footer = () => (
+	<Container>
+		<Text>Inspired by  
+		<Link href="https://brittanychiang.com/" target="_blank">Brittany Chiang</Link> 
+			& Build by Yasmin Miranda.
+		</Text>
+	</Container>
+);
+
+export default Footer;

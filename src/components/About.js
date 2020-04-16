@@ -46,6 +46,7 @@ const Text = styled.p`
 	}
 	@media(max-width: 648px) {
 		width: ${(props) => props.width && '100%'};
+		font-size: ${props => props.fontSizeMob};
 	}
 `;
 
@@ -110,7 +111,15 @@ export default class About extends Component {
 				<Line width={'10%'} />
 					<Text fontSize={'2rem'} color>About me</Text>
 				<ContainerDescription>
-					<Text fontSize={'1.5rem'} width marginT={'3rem'}>I am Yasmin, I am a Junior Front-End <strong>Developer</strong> and <strong>Marketing student</strong> at the Getúlio Vargas Foundation. I was born and live in Rio de Janeiro, Brazil.</Text>
+					<Text
+						marginT={'3rem'}
+						width
+						fontSize={'1.5rem'}
+						fontSizeMob={'1.3rem'}
+					>
+						I am Yasmin, I am a Junior Front-End <strong>Developer</strong> and <strong>Marketing student</strong> at the Getúlio Vargas Foundation.
+						I was born and live in Rio de Janeiro, Brazil.
+					</Text>
 					<Image src={yasmin} alt="Yasmin Miranda" />
 				</ContainerDescription>
 				<Line width={'3%'} />

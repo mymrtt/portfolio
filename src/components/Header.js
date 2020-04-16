@@ -57,8 +57,8 @@ const MenuImage = styled.img`
 `;
 
 const ContainerListMob = styled.div`
-	margin-top: 20rem;
 	position: fixed;
+	top: 0;
 	z-index: 2;
 	width: 100%;
 	height: 100vh;
@@ -69,7 +69,7 @@ const ContainerClose = styled.div`
 	display: none;
 	@media(max-width: 648px) {
 		display: flex;
-		margin: 0 2rem 0;
+		margin: 1rem 2rem 0;
 	}
 `; 
 
@@ -103,9 +103,9 @@ export default class Header extends Component {
 				<MenuImage close src={MenuClose} alt="Menu Close" onClick={this.handleMenu} />
 			</ContainerClose>
 			<ListMobile>
-				<ListItem href='#About'>About</ListItem>
-				<ListItem href='#Experiece'>Experience</ListItem>
-				<ListItem href='#Work'>Work</ListItem>
+				<ListItem href='#About' onClick={this.handleMenu}>About</ListItem>
+				<ListItem href='#Experiece' onClick={this.handleMenu}>Experience</ListItem>
+				<ListItem href='#Work' onClick={this.handleMenu}>Work</ListItem>
 			</ListMobile>
 		</ContainerListMob>
 	)

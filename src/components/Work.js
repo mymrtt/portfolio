@@ -35,6 +35,10 @@ const Text = styled.p`
 
 const ContainerList = styled.div`
 	display: flex;
+
+	@media(max-width: 648px){
+		flex-direction: column;
+	}
 `;
 
 const List = styled.ul`
@@ -43,6 +47,11 @@ const List = styled.ul`
 	height: 45vh;
 	border: 1px solid #c7c7c721;
 	border-radius: 6px;
+
+	@media(max-width: 648px) {
+		display: flex;
+		height: auto;
+	}
 `;
 
 const ListItem = styled.li`
@@ -101,7 +110,7 @@ export default class Work extends Component {
 	}
 
 	handleOpenWork = () => {
-		this.setState({ openWork: !this.state.openWork});
+		this.setState({ openWork: !this.state.openWork });
 	}
 
 	renderWork = () => (
@@ -112,7 +121,7 @@ export default class Work extends Component {
 					alt="Instagram"
 				/>
 				<Text>I recreated a user profile on instagram using the css grid and this project was developed through 
-				<b><a href="https://codepen.io/mymrtt/pen/MNYxNy" target="_blank"> Codepen</a></b>.</Text>
+				<b><a href="https://codepen.io/mymrtt/pen/MNYxNy" target="_blank" rel="noopener noreferrer"> Codepen</a></b>.</Text>
 			</Figure>
 		</ContainerWork>
 	)
@@ -125,9 +134,7 @@ export default class Work extends Component {
 					<ContainerList>
 						<List>
 							{this.state.workList.map(item => (
-								<>
-									<ListItem onClick={this.handleOpenWork} isSelected={this.state.openWork}>{item}</ListItem>
-								</>
+								<ListItem onClick={this.handleOpenWork} isSelected={this.state.openWork}>{item}</ListItem>
 							))}
 						</List>
 						{this.state.openWork && this.renderWork()}

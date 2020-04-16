@@ -47,22 +47,21 @@ const Line = styled.div`
 	transform: rotate(270deg);
 `;
 
-export default class Medias extends Component {
-  render() {
-    return (
-      <Container>
-				<a href="https://github.com/mymrtt" target="_blank">
-					<Image src={github} alt="GitHub" />
-				</a>
-				<a href="https://codepen.io/mymrtt" target="_blank">
-					<Image src={codepen} alt="CodePen" />
-				</a>
-				<a href="https://www.linkedin.com/in/yasmin-miranda/" target="_blank">
-					<Image src={linkedin} alt="LinkedIn" />
-				</a>
-				<Line width={'30%'} />
-				<Text>mymrtt@gmail.com</Text>
-			</Container>
-    );
-  }
-}
+const Medias = () => (
+	<Container>
+		<a href="https://github.com/mymrtt" target="_blank" rel="noopener noreferrer">
+			<Image src={github} alt="GitHub" />
+		</a>
+		<a href="https://codepen.io/mymrtt" target="_blank" rel="noopener noreferrer">
+			<Image src={codepen} alt="CodePen" />
+		</a>
+		<a href="https://www.linkedin.com/in/yasmin-miranda/" target="_blank" rel="noopener noreferrer">
+			<Image src={linkedin} alt="LinkedIn" />
+		</a>
+		<Line width={'30%'} />
+		<Text>mymrtt@gmail.com</Text>
+	</Container>
+)
+
+export default Medias;
+
