@@ -11,6 +11,7 @@ const Container = styled.div`
 		padding: 0 10%;
 		padding-top: 2rem;
 		height: ${(props) => props.heightMob};
+		padding-bottom: ${(props) => props.paddingBottomMob};
 	}
 `;
 
@@ -117,7 +118,8 @@ export default class Experience extends Component {
     return (
 			<Container id="Experiece"
 				heightDesk={ this.state.isOpen ? '65vh' : '60vh' }
-				heightMob={ this.state.isOpen ? '90vh' : '60vh' }
+				heightMob={ this.state.isOpen ? 'auto' : '60vh' }
+				paddingBottomMob={ this.state.isOpen ? '2rem' : '0'}
 			>
 				<Line width={'10%'} />
 				<Text fontSize={'2rem'} color>Experience</Text>
