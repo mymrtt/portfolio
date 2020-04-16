@@ -26,7 +26,7 @@ const Text = styled.p`
 	color: ${props => props.color};
 	font-size: ${props => props.fontSize};
 	letter-spacing: 2px;
-	line-height: 2rem;
+	${'' /* line-height: 2rem; */}
 
 	@media(max-width: 960px) {
 		width: ${(props) => props.width && '55%'};
